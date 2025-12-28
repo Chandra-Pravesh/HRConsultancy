@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Consultancy Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header1 {
+            height: 5%;
+            width: 100%;
+            padding-left: 10%;
+        }
+
+        .header1 .container {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .typingtest {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            font-weight: 700;
+            border-right: 3px solid;
+            width: 26ch;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(32) infinite;
+            animation-delay: 1ms;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+
+        header h1 {
+            color: #004c97;
+            margin: 0;
+        }
+
+        header nav a {
+            color: #004c97;
+            margin-left: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #004c97;
+        }
+
+        header nav a:hover {
+            text-decoration: none;
+            background-color: #004c97;
+            color: white;
+            transition: all 1s ease;
+        }
+
+        /* New Article Section Styles */
+        .article-section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-section h2 {
+            color: #004c97;
+            margin-bottom: 15px;
+        }
+
+        .article-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .services {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .services h1 {
+            font-size: 28px;
+            color: #004c97;
+            margin-bottom: 20px;
+        }
+
+        /* CSS Grid for the service items */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            padding: 20px;
+            
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .service-item h1 {
+            font-size: 24px;
+            color: #004c97;
+        }
+
+        .service-item p {
+            line-height: 1.6;
+        }
+
+        /* Hover effect */
+        .service-item:hover {
+            transform: translateY(-10px); /* Lifts the service item */
+            background-color: #e9ecef; /* Changes the background color */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a stronger shadow */
+        }
+
+        footer {
+            background-color: #0e0e0eda;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feedback-social-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #0e0e0eda;
+            border-radius: 10px;
+        }
+
+        .feedback-section, .social-media {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .feedback-section h2, .social-media h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .feedback-section form {
+            margin-bottom: 20px;
+        }
+
+        .feedback-section input, .feedback-section textarea {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .feedback-section button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #004c97;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .feedback-section button:hover {
+            background-color: #006bb3;
+        }
+
+        .social-media {
+            text-align: center;
+        }
+
+        .social-media .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a img {
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover img {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+        }
+
+        .morelinks {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .link-section {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .link-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #f0f0f0;
+        }
+
+        .link-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .link-section ul li {
+            margin: 10px 0;
+        }
+
+        .link-section ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+
+        .link-section ul li a:hover {
+            color: #00bcd4; /* Color change on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .morelinks:hover .link-section h2 {
+            color: #00bcd4; /* Change heading color on hover */
+        }
+
+        @media (max-width: 768px) {
+            header nav a {
+                padding: 10px;
+            }
+
+            .morelinks {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .link-section {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .feedback-social-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .feedback-section, .social-media {
+                flex: unset;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teamcat HR Consultancy</h1>
+        <nav>
+            <a href="Hr_Dashboard.jsp">HR Dashboard</a>
+            <a href="ClientDashboard.jsp">Client Dashboard</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="Auth.jsp">Login/sign up</a>
+            
+        </nav>
+    </header>
+    <div class="header1"></div> 
+    <div class="typingtest">Guiding vision to victory</div>
+
+    <!-- New Article Section -->
+    <div class="article-section">
+        <h2>About Our HR Consultancy Services</h2>
+        <p>At TEAM #8 Consultancy, we specialize in providing tailored HR solutions to meet the diverse needs of organizations. Our team of experts is dedicated to helping businesses thrive by optimizing their human resources processes.</p>
+        <p>We understand that human capital is one of the most valuable assets of any organization. Therefore, we offer a comprehensive suite of services that includes recruitment, training, performance management, and more. Our goal is to support your organization in achieving its objectives by building a productive and engaged workforce.</p>
+        <p>Let us partner with you in transforming your HR practices to drive success and growth in your business.</p>
+    </div>
+
+    <div class="services" id="services">
+        <h1>Our Services</h1>
+        <div class="services-grid">
+            <div class="service-item">
+                <h1>Recruitment Services</h1>
+                <p>We help you find the right talent to fit your organization's needs.</p>
+            </div>
+            <div class="service-item">
+                <h1>Training & Development</h1>
+                <p>We offer training programs to enhance the skills and productivity of your employees.</p>
+            </div>
+            <div class="service-item">
+                <h1>Performance Management</h1>
+                <p>Our performance management solutions help in evaluating and enhancing employee performance.</p>
+            </div>
+            <div class="service-item">
+                <h1>HR Compliance</h1>
+                <p>We ensure your HR practices comply with all relevant regulations and laws.</p>
+            </div>
+            <div class="service-item">
+                <h1>Employee Engagement</h1>
+                <p>We assist in creating strategies that boost employee morale and engagement.</p>
+            </div>
+            <div class="service-item">
+                <h1>Workplace Culture</h1>
+                <p>We help foster a positive workplace culture that drives performance and retention.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="feedback-social-container">
+            <div class="feedback-section">
+                <h2>Your Feedback Matters!</h2>
+                <form action="#">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="4" placeholder="Your Feedback" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="contact">
+            <div class="social-media">
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="#"><img src="facebook_icon.png" alt="Facebook" width="30"></a>
+                    <a href="#"><img src="twitter_icon.png" alt="Twitter" width="30"></a>
+                    <a href="#"><img src="linkedin_icon.png" alt="LinkedIn" width="30"></a>
+                </div>
+            </div>
+        </div></div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TEAM #8 Consultancy. All Rights Reserved.</p>
+        </div>
+        <div class="morelinks">
+            <div class="link-section">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
